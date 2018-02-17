@@ -33,8 +33,8 @@ namespace nmm
         {
             Game g = new Game();
 
-            g.White = new DumbCpu(true);
-            g.Black = new AIPlayer(false);
+            g.White = new AIPlayer(true);
+            g.Black = new HumanPlayer(false);
 
             while (g.MakeTurn()) ;
             
