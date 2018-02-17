@@ -191,7 +191,7 @@ namespace nmm
 
             /* Determine which pieces we could potentially remove from the opponent */
             var opp_runs = GetRunPieces(opp_board);
-            var opp_removable_pieces = opp_board & opp_runs;
+            var opp_removable_pieces = opp_board & ~opp_runs;
             // unless all pieces are part of a run in which case we can
             if (opp_removable_pieces == 0)
                 opp_removable_pieces = opp_board;
