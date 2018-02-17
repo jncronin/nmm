@@ -97,6 +97,11 @@ namespace nmm
                 player_piecestoplace--;
             }
             else
+            {
+                var old_piece = InterpretInput("Take piece from: ");
+                var new_piece = InterpretInput("And place at: ");
+                new_player_board = player_board & ~old_piece | new_piece;
+            }
                 throw new NotImplementedException();
 
             // see if we made a run
